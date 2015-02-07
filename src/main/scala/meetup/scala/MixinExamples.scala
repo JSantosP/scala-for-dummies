@@ -31,15 +31,15 @@ trait MixinExamples {
   pigeon.eatRock()
 
   trait A {
-  	println("A")
+    println("A")
   }
 
   trait B {
-  	println("B")
+    println("B")
   }
 
   class C extends A with B {
-  	println("C")
+    println("C")
   }
 
   new C // Will print: "A" "B" "C"
