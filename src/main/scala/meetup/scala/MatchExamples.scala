@@ -2,6 +2,14 @@ package meetup.scala
 
 trait MatchExamples {
 
+  val condition = (15 % 5 == 0)
+  if (condition)
+    println("this line doesn't need braces")
+  else if (true) {
+    val auxValue = 2
+    println("...but this line does need them")
+  } else ()
+
   //	Match acts like a Java switch...
 
   val someValue: Int = 1
