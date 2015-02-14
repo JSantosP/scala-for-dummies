@@ -32,7 +32,9 @@ trait MatchExamples {
     case Car("Ferrari", _) => println("You wish it was a Ferrari")
     case Car(_, Wheel(35)) => println("Of course it's not a tractor...")
     case Car(_, Wheel(size)) => println("Actual wheel size is " + size)
+    case Car(_, Wheel(size)) if size > 10 => println("Maybe a tank?")
     case car: Car => println("Ok, we were assuming this was a car...")
+    case `car` => println("... oh, wait! We were assuming this was my sunday's car!")
     case _ => println("Don't know what to do with this car")
   }
 
